@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="cs" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Výkup Nemovitostí Praha | Rychlý výkup domů, bytů, chat | Nemovitostnivykupy.cz</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Vykoupíme vaši nemovitost v Praze za 24 hodin. Rychlý výkup domů, bytů, chat a garáží. Žádné poplatky, peníze ihned. Nezávazná nabídka zdarma.">
+    <meta name="keywords" content="výkup nemovitostí Praha, rychlý prodej domu, výkup bytu, prodej nemovitosti, výkup podílu nemovitosti">
+    <meta name="author" content="Nemovitostnivykupy.cz">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="Nemovitostnivykupy.cz">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter for clean, professional look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <!-- Structured Data / Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "RealEstateAgent",
+        "name": "Nemovitostnivykupy.cz",
+        "description": "Profesionální výkup nemovitostí v Praze. Rychlý výkup domů, bytů, chat a garáží za férovou cenu.",
+        "url": "Nemovitostnivykupy.cz",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "U Rustonky 714/1",
+            "addressLocality": "Praha 8",
+            "addressCountry": "CZ"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+420770156156",
+            "contactType": "sales",
+            "email": "info@nemovitostnivykupy.cz",
+            "availableLanguage": "cs"
+        },
+        "areaServed": {
+            "@type": "Place",
+            "name": "Praha"
+        },
+        "serviceType": "Výkup nemovitostí"
+    }
+    </script>
+
+
+</head>
+<body class="bg-gray-50 text-slate-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white/95 backdrop-blur-lg sticky top-0 z-30 shadow-sm border-b border-gray-100">
+        <div class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center">
+                <img src="https://nemovitostnivykupy.cz/images/loga/Nemovitostni_vykupy-White@2x.png" alt="Nemovitostní výkupy" class="h-8 sm:h-10 w-auto filter invert">
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#o-nas" class="text-slate-600 hover:text-blue-600 transition-colors duration-300 font-medium">O nás</a>
+                <a href="#jak-to-funguje" class="text-slate-600 hover:text-blue-600 transition-colors duration-300 font-medium">Jak to funguje</a>
+                <a href="#faq" class="text-slate-600 hover:text-blue-600 transition-colors duration-300 font-medium">FAQ</a>
+                <a href="#reference" class="text-slate-600 hover:text-blue-600 transition-colors duration-300 font-medium">Reference</a>
+                <a href="#kontakt" class="cta-button">Kontaktovat</a>
+            </nav>
+            
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <div class="hamburger" id="hamburger">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section text-white relative flex items-center justify-center min-h-screen">
+            <div class="hero-content container mx-auto px-4 sm:px-6 text-center -mt-20">
+                <h1 id="hero-title" class="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight opacity-0 translate-y-8">
+                    Vykoupíme vaši nemovitost
+                    <span class="block text-3xl sm:text-4xl md:text-6xl font-light mt-2">férově a rychle</span>
+                </h1>
+                <p id="hero-subtitle" class="text-xl sm:text-2xl md:text-3xl font-light text-blue-100 mb-10 opacity-0 translate-y-8 max-w-4xl mx-auto">
+                    Diskrétně, za nejlepší možnou cenu. Bez starostí a poplatků.
+                </p>
+                <a href="#kontakt" id="hero-button" class="cta-button text-lg px-12 py-4 inline-block opacity-0 translate-y-8 mb-56">
+                    Nezávazná nabídka zdarma
+                </a>
+                
+                <!-- Property Types -->
+                <div id="hero-cards" class="absolute -bottom-20 sm:-bottom-24 md:-bottom-20 left-1/2 -translate-x-1/2 w-full max-w-5xl px-4 opacity-0 translate-y-8 z-20">
+                    <div class="bg-white/95 backdrop-blur-lg p-6 md:p-8 rounded-2xl shadow-2xl grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-slate-800 border border-white/20">
+                        <div class="text-center">
+                            <div class="w-10 h-10 md:w-12 md:h-12 mx-auto mb-2 md:mb-3 bg-blue-100 rounded-xl flex items-center justify-center">
+                                <svg class="w-5 h-5 md:w-6 md:h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                                </svg>
+                            </div>
+                            <span class="font-semibold block text-sm md:text-lg">Dům</span>
+                            <span class="text-xs md:text-sm text-slate-500">Rodinný i činžovní</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-10 h-10 md:w-12 md:h-12 mx-auto mb-2 md:mb-3 bg-blue-100 rounded-xl flex items-center justify-center">
+                                <svg class="w-5 h-5 md:w-6 md:h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                                </svg>
+                            </div>
+                            <span class="font-semibold block text-sm md:text-lg">Byt</span>
+                            <span class="text-xs md:text-sm text-slate-500">Osobní i družstevní vlastnictví</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-10 h-10 md:w-12 md:h-12 mx-auto mb-2 md:mb-3 bg-blue-100 rounded-xl flex items-center justify-center">
+                                <svg class="w-5 h-5 md:w-6 md:h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M10.5 3L12 2l1.5 1H21v6H3V3h7.5z"/>
+                                </svg>
+                            </div>
+                            <span class="font-semibold block text-sm md:text-lg">Chata</span>
+                            <span class="text-xs md:text-sm text-slate-500">Rekreační objekt</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-10 h-10 md:w-12 md:h-12 mx-auto mb-2 md:mb-3 bg-blue-100 rounded-xl flex items-center justify-center">
+                                <svg class="w-5 h-5 md:w-6 md:h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>
+                                </svg>
+                            </div>
+                            <span class="font-semibold block text-sm md:text-lg">Garáž</span>
+                            <span class="text-xs md:text-sm text-slate-500">Samostatná i řadová</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Benefits Section -->
+        <section id="benefity" class="pt-40 pb-20 md:pt-48 md:pb-28 bg-white relative z-10">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="section-header gsap-reveal">
+                    <h2 class="section-title">Proč si vybrat nás</h2>
+                    <p class="section-subtitle">Rychlost, transparentnost a profesionalita na prvním místě</p>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                    <div class="benefit-card gsap-reveal floating">
+                        <div class="benefit-icon">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-center">Nacenění do 24 hodin</h3>
+                        <p class="text-slate-600 text-center">Získejte rychlou a nezávaznou cenovou nabídku během jednoho dne.</p>
+                    </div>
+                    
+                    <div class="benefit-card gsap-reveal floating" style="animation-delay: 1s;">
+                        <div class="benefit-icon">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-center">Peníze ihned na účet</h3>
+                        <p class="text-slate-600 text-center">Vyplácíme finance okamžitě při podpisu kupní smlouvy.</p>
+                    </div>
+                    
+                    <div class="benefit-card gsap-reveal floating" style="animation-delay: 2s;">
+                        <div class="benefit-icon">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-center">Žádné poplatky</h3>
+                        <p class="text-slate-600 text-center">Naše služby jsou pro vás zcela zdarma, bez skrytých poplatků.</p>
+                    </div>
+                    
+                    <div class="benefit-card gsap-reveal floating" style="animation-delay: 3s;">
+                        <div class="benefit-icon">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-center">Kompletní administrativa</h3>
+                        <p class="text-slate-600 text-center">Všechny úřední záležitosti vyřídíme za vás, zcela zdarma.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section py-16 md:py-20 text-white relative">
+            <div class="container mx-auto px-4 sm:px-6 relative z-10">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="stat-item gsap-reveal">
+                        <div class="stat-number" data-target="250">0</div>
+                        <div class="text-lg font-medium">Prodaných nemovitostí</div>
+                    </div>
+                    <div class="stat-item gsap-reveal">
+                        <div class="stat-number" data-target="24">0</div>
+                        <div class="text-lg font-medium">Hodin do nacenění</div>
+                    </div>
+                    <div class="stat-item gsap-reveal">
+                        <div class="stat-number" data-target="98">0</div>
+                        <div class="text-lg font-medium">% spokojených klientů</div>
+                    </div>
+                    <div class="stat-item gsap-reveal">
+                        <div class="stat-number" data-target="5">0</div>
+                        <div class="text-lg font-medium">Let zkušeností</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="o-nas" class="py-20 md:py-28 bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="gsap-reveal order-2 md:order-1">
+                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Moderní interiér nemovitosti" class="rounded-2xl shadow-2xl w-full">
+                    </div>
+                    <div class="gsap-reveal order-1 md:order-2">
+                        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">Dáváme nemovitostem nový život</h2>
+                        <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                            Specializujeme se na výkup podílů i celých nemovitostí. Oceňujeme vaši důvěru a nabízíme transparentní a férový proces. Každou nemovitost citlivě renovujeme, abychom jí vrátili hodnotu a lesk.
+                        </p>
+                        <p class="text-slate-600 mb-8 leading-relaxed">
+                            Postaráme se o veškerou administrativu a uhradíme všechny poplatky. Pokud zvažujete prodej, kontaktujte nás pro nezávaznou konzultaci a cenovou nabídku.
+                        </p>
+                        <a href="#kontakt" class="cta-button inline-block">
+                            Chci nacenit nemovitost
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="jak-to-funguje" class="py-20 md:py-28 bg-white">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="section-header gsap-reveal">
+                    <h2 class="section-title">Proces výkupu v 5 krocích</h2>
+                    <p class="section-subtitle">Jednoduchost, rychlost a transparentnost je naší prioritou</p>
+                </div>
+
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+
+                    <div class="timeline-step">
+                        <div class="timeline-content">
+                            <div class="step-label">Krok 1</div>
+                            <h3 class="step-title">Kontaktujte nás</h3>
+                            <p class="step-description">Vyplňte formulář, zavolejte nebo napište email.</p>
+                        </div>
+                        <div class="timeline-icon">
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step">
+                        <div class="timeline-content">
+                            <div class="step-label">Krok 2</div>
+                            <h3 class="step-title">Naceníme nemovitost</h3>
+                            <p class="step-description">Do 24 hodin obdržíte nezávaznou nabídku.</p>
+                        </div>
+                        <div class="timeline-icon">
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step">
+                        <div class="timeline-content">
+                            <div class="step-label">Krok 3</div>
+                            <h3 class="step-title">Schválení a smlouva</h3>
+                            <p class="step-description">Připravíme veškeré smluvní podklady k podpisu.</p>
+                        </div>
+                        <div class="timeline-icon">
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step">
+                        <div class="timeline-content">
+                            <div class="step-label">Krok 4</div>
+                            <h3 class="step-title">Vyřízení administrativy</h3>
+                            <p class="step-description">Vklady na katastr a právní servis zařídíme za vás.</p>
+                        </div>
+                        <div class="timeline-icon">
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step">
+                        <div class="timeline-content">
+                            <div class="step-label">Krok 5</div>
+                            <h3 class="step-title">Peníze ihned</h3>
+                            <p class="step-description">Finance vyplácíme okamžitě při podpisu smlouvy.</p>
+                        </div>
+                        <div class="timeline-icon">
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-20 md:py-28 bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="section-header gsap-reveal">
+                    <h2 class="section-title">Často kladené otázky</h2>
+                    <p class="section-subtitle">Odpovědi na nejčastější dotazy našich klientů</p>
+                </div>
+
+                <div class="max-w-4xl mx-auto">
+                    <div class="faq-item gsap-reveal">
+                        <button class="faq-question">
+                            <span>Jak rychle dostanu nabídku na mou nemovitost?</span>
+                            <svg class="faq-icon w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="text-slate-600">Naši odborníci zpracují cenovou nabídku do 24 hodin od obdržení všech potřebných informací o nemovitosti. V případě urgentních případů dokážeme nabídku připravit i rychleji.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item gsap-reveal">
+                        <button class="faq-question">
+                            <span>Vykupujete i podíly nemovitostí?</span>
+                            <svg class="faq-icon w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="text-slate-600">Ano, specializujeme se na výkup jak celých nemovitostí, tak i podílů. Řešíme složité situace s více spoluvlastníky, dědické spory nebo situace s problematickými vlastníky.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item gsap-reveal">
+                        <button class="faq-question">
+                            <span>Jaké dokumenty potřebuji k prodeji?</span>
+                            <svg class="faq-icon w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="text-slate-600">Základní dokumenty zahrnují list vlastnictví, občanský průkaz a energetický štítek. Ostatní dokumenty můžeme obstarat za vás - včetně výpisu z katastru, znaleckého posudku nebo energetického štítku.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item gsap-reveal">
+                        <button class="faq-question">
+                            <span>Platíte skutečně okamžitě při podpisu?</span>
+                            <svg class="faq-icon w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="text-slate-600">Ano, finance převádíme na váš účet okamžitě při podpisu kupní smlouvy. Máme k dispozici dostatečné finanční prostředky a nepotřebujeme čekat na schválení úvěru.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item gsap-reveal">
+                        <button class="faq-question">
+                            <span>Vykupujete nemovitosti v celé České republice?</span>
+                            <svg class="faq-icon w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="text-slate-600">Primárně se zaměřujeme na Prahu a okolí, ale vykupujeme nemovitosti v celé České republice. Kontaktujte nás s informacemi o vaší nemovitosti a rádi posoudíme možnosti spolupráce.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item gsap-reveal">
+                        <button class="faq-question">
+                            <span>Co když mám na nemovitosti hypotéku nebo zástavní právo?</span>
+                            <svg class="faq-icon w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="text-slate-600">Není to problém. Pomůžeme vám vyřešit splacení hypotéky nebo zástavního práva. Částku za nemovitost rozděleíme - část půjde na splacení závazků a zbytek obdržíte vy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- References Section -->
+        <section id="reference" class="py-20 md:py-28 bg-white">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="section-header gsap-reveal">
+                    <h2 class="section-title">Reference klientů</h2>
+                    <p class="section-subtitle">Spokojenost našich klientů je naší nejlepší vizitkou</p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    <div class="bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-gray-100 gsap-reveal">
+                        <div class="flex items-center mb-6">
+                            <div class="flex text-yellow-400">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 italic mb-6 text-lg leading-relaxed">
+                            "Společnost Nemovitostní výkupy nám pomohla prodat podíl na rekreačním objektu. Díky jejich rychlému a profesionálnímu přístupu probíhala transakce hladce a peníze jsme obdrželi okamžitě. Dům byl zrekonstruován a má nového spokojeného majitele. Děkujeme za skvělou spolupráci."
+                        </p>
+                        <div class="flex items-center">
+                            <div>
+                                <p class="font-semibold text-slate-800">Rodina H.</p>
+                                <p class="text-sm text-slate-500">Praha</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-gray-100 gsap-reveal">
+                        <div class="flex items-center mb-6">
+                            <div class="flex text-yellow-400">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 italic mb-6 text-lg leading-relaxed">
+                            "Chalupu ve spoluvlastnictví ohrožovala exekuce jednoho příbuzného. Společnost Nemovitostní výkupy exekuci vyplatila a zachránila nemovitost. Přijali jsme nabídku, prodali zbývající podíl a peníze dostali okamžitě. Během 2 měsíců jsme místo dluhů měli peníze na účtu. Chalupa byla zrekonstruována a má nové majitele."
+                        </p>
+                        <div class="flex items-center">
+                            <div>
+                                <p class="font-semibold text-slate-800">Paní E.S.</p>
+                                <p class="text-sm text-slate-500">Brno</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="kontakt" class="py-20 md:py-28 bg-slate-800 text-white relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-900 to-slate-900"></div>
+            <div class="container mx-auto px-4 sm:px-6 relative z-10">
+                <div class="section-header gsap-reveal">
+                    <h2 class="section-title text-white">Máte zájem o prodej?</h2>
+                    <p class="section-subtitle text-blue-100">Neváhejte nás kontaktovat. Jsme tu pro vás každý den.</p>
+                </div>
+                
+                <div class="modern-form max-w-6xl mx-auto p-6 md:p-12 rounded-3xl gsap-reveal">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <!-- Contact Information -->
+                        <div class="text-slate-800">
+                            <h3 class="text-2xl font-bold mb-8 text-slate-900">Kontaktní údaje</h3>
+                            
+                            <!-- Contact Person -->
+                            <div class="mb-6 p-8 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl border border-blue-100 shadow-lg">
+                                <div class="text-center mb-6">
+                                    <img src="https://nemovitostnivykupy.cz/images/contact/ContactAdela.png" alt="Adéla Nováková" class="w-32 h-32 mx-auto rounded-full object-cover shadow-lg border-4 border-white mb-4">
+                                    <h4 class="font-bold text-xl text-slate-900 mb-1">Adéla Nováková</h4>
+                                    <p class="text-blue-600 font-semibold text-lg mb-2">Obchodní oddělení</p>
+                                    <div class="w-12 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full mx-auto mb-3"></div>
+                                    <p class="text-sm text-slate-600 leading-relaxed">Specialistka na výkup nemovitostí s více než 5 lety zkušeností v oboru</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Contact Details -->
+                            <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl border border-blue-100 shadow-lg p-6">
+                                <div class="space-y-4">
+                                    <a href="tel:+420770156156" class="flex items-center gap-4 p-4 rounded-xl hover:bg-white/50 transition-colors group">
+                                        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-200 transition-colors">
+                                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold text-slate-900">+420 770 156 156</p>
+                                            <p class="text-sm text-slate-600">Volejte kdykoliv, 7 dní v týdnu</p>
+                                        </div>
+                                    </a>
+                                    
+                                    <a href="mailto:info@nemovitostnivykupy.cz" class="flex items-center gap-4 p-4 rounded-xl hover:bg-white/50 transition-colors group">
+                                        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-200 transition-colors">
+                                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold text-slate-900">info@nemovitostnivykupy.cz</p>
+                                            <p class="text-sm text-slate-600">Odpovídáme do 2 hodin</p>
+                                        </div>
+                                    </a>
+                                    
+                                    <a href="https://maps.app.goo.gl/xxo9vB6FmzDf1kXFA" target="_blank" class="flex items-center gap-4 p-4 rounded-xl hover:bg-white/50 transition-colors group">
+                                        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-200 transition-colors">
+                                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold text-slate-900">U Rustonky 714/1, Praha 8</p>
+                                            <p class="text-sm text-slate-600">Osobní konzultace po domluvě</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Contact Form -->
+                        <div>
+                            <h3 class="text-2xl font-bold mb-8 text-slate-900">Napište nám</h3>
+                            <form action="#" method="POST" class="space-y-6">
+                                <div class="grid sm:grid-cols-2 gap-4">
+                                    <input type="text" name="name" class="form-input" placeholder="Vaše jméno *" required>
+                                    <input type="tel" name="phone" class="form-input" placeholder="Telefon">
+                                </div>
+                                <input type="email" name="email" class="form-input w-full" placeholder="Váš email *" required>
+                                <select name="property_type" class="form-select" required>
+                                    <option value="" disabled selected>Vyberte typ nemovitosti</option>
+                                    <option value="rodinny-dum">Rodinný dům</option>
+                                    <option value="cinzovni-dum">Činžovní dům</option>
+                                    <option value="byt-osobni-vlastnictvi">Byt v osobním vlastnictví</option>
+                                    <option value="byt-druzstevni">Družstevní byt</option>
+                                    <option value="chata">Chata</option>
+                                    <option value="chalupa">Chalupa</option>
+                                    <option value="garaz-samostatna">Garáž samostatná</option>
+                                    <option value="garaz-radova">Garáž řadová</option>
+                                    <option value="pozemek-stavebni">Stavební pozemek</option>
+                                    <option value="pozemek-zemedelsky">Zemědělský pozemek</option>
+                                    <option value="podil-nemovitosti">Podíl na nemovitosti</option>
+                                    <option value="komerci-objekt">Komerční objekt</option>
+                                    <option value="jine">Jiný typ nemovitosti</option>
+                                </select>
+                                <textarea name="message" rows="5" class="form-input w-full" placeholder="Popište stručně vaši nemovitost, její stav, lokalitu a důvod prodeje. Čím více informací nám poskytnete, tím rychleji a přesněji vám můžeme připravit cenovou nabídku." required></textarea>
+                                
+                                <div class="flex items-start gap-3">
+                                    <input type="checkbox" id="gdpr" name="gdpr" class="mt-1 rounded border-gray-300 text-blue-600" required>
+                                    <label for="gdpr" class="text-sm text-slate-600">
+                                        Souhlasím se zpracováním osobních údajů za účelem zpracování poptávky podle GDPR *
+                                    </label>
+                                </div>
+                                
+                                <button type="submit" class="cta-button w-full text-lg">
+                                    Odeslat nezávaznou poptávku
+                                </button>
+                                
+                                <p class="text-xs text-slate-500 text-center">
+                                    * Povinné pole. Odpovíme vám do 24 hodin s nezávaznou cenovou nabídkou.
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center">
+                <div class="flex justify-center mb-6">
+                    <img src="https://nemovitostnivykupy.cz/images/loga/Nemovitostni_vykupy-White@2x.png" alt="Nemovitostní výkupy" class="h-6 sm:h-8 w-auto">
+                </div>
+                <p class="text-slate-300 mb-4">Profesionální přístup k vaší nemovitosti</p>
+                <p class="text-sm">&copy; 2024 Nemovitostnivykupy.cz - Všechna práva vyhrazena.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <div class="mobile-menu fixed top-0 right-0 h-full w-80 bg-white shadow-lg z-40 md:hidden" id="mobileMenu">
+        <div class="p-6">
+            <div class="text-right mb-8">
+                <button id="close-menu-btn" class="text-slate-600 hover:text-blue-600">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+        
+            <nav class="flex flex-col space-y-6">
+                <a href="#o-nas" class="text-slate-600 hover:text-blue-600 transition-colors duration-300 text-lg font-medium mobile-nav-link">O nás</a>
+                <a href="#jak-to-funguje" class="text-slate-600 hover:text-blue-600 transition-colors duration-300 text-lg font-medium mobile-nav-link">Jak to funguje</a>
+                <a href="#faq" class="text-slate-600 hover:text-blue-600 transition-colors duration-300 text-lg font-medium mobile-nav-link">FAQ</a>
+                <a href="#reference" class="text-slate-600 hover:text-blue-600 transition-colors duration-300 text-lg font-medium mobile-nav-link">Reference</a>
+                <a href="#kontakt" class="cta-button text-center mobile-nav-link">Kontaktovat</a>
+            </nav>
+        </div>
+    </div>
+    
+    <div class="mobile-overlay fixed inset-0 bg-black bg-opacity-50 z-30 hidden" id="mobileOverlay"></div>
+
+    <!-- Contact Popup Modal -->
+    <div class="popup-overlay" id="contactPopup">
+        <div class="popup-modal">
+            <button class="popup-close" id="closePopup">
+                <svg class="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+            
+            <div class="popup-header">
+                <h2 class="text-2xl md:text-3xl font-bold mb-3">Máte zájem o prodej?</h2>
+                <p class="text-blue-100 text-lg">Neváhejte nás kontaktovat. Jsme tu pro vás každý den.</p>
+            </div>
+            
+            <div class="popup-content">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Contact Person -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-6 text-slate-900">Kontaktní údaje</h3>
+                        
+                        <div class="mb-6 p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl border border-blue-100 shadow-lg">
+                            <div class="text-center mb-4">
+                                <img src="https://nemovitostnivykupy.cz/images/contact/ContactAdela.png" alt="Adéla Nováková" class="w-24 h-24 mx-auto rounded-full object-cover shadow-lg border-4 border-white mb-3">
+                                <h4 class="font-bold text-lg text-slate-900 mb-1">Adéla Nováková</h4>
+                                <p class="text-blue-600 font-semibold mb-2">Obchodní oddělení</p>
+                                <div class="w-8 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full mx-auto mb-2"></div>
+                                <p class="text-xs text-slate-600 leading-relaxed">Specialistka na výkup nemovitostí s více než 5 lety zkušeností</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl border border-blue-100 shadow-lg p-4">
+                            <div class="space-y-3">
+                                <a href="tel:+420770156156" class="flex items-center gap-3 p-3 rounded-xl hover:bg-white/50 transition-colors group">
+                                    <div class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-200 transition-colors">
+                                        <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-slate-900 text-sm">+420 770 156 156</p>
+                                        <p class="text-xs text-slate-600">Volejte kdykoliv</p>
+                                    </div>
+                                </a>
+                                
+                                <a href="mailto:info@nemovitostnivykupy.cz" class="flex items-center gap-3 p-3 rounded-xl hover:bg-white/50 transition-colors group">
+                                    <div class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-200 transition-colors">
+                                        <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-slate-900 text-sm">info@nemovitostnivykupy.cz</p>
+                                        <p class="text-xs text-slate-600">Odpovídáme do 2 hodin</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-6 text-slate-900">Napište nám</h3>
+                        <form action="#" method="POST" class="space-y-4" id="popupContactForm">
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <input type="text" name="name" class="form-input" placeholder="Vaše jméno *" required>
+                                <input type="tel" name="phone" class="form-input" placeholder="Telefon">
+                            </div>
+                            <input type="email" name="email" class="form-input w-full" placeholder="Váš email *" required>
+                            <select name="property_type" class="form-select" required>
+                                <option value="" disabled selected>Vyberte typ nemovitosti</option>
+                                <option value="rodinny-dum">Rodinný dům</option>
+                                <option value="cinzovni-dum">Činžovní dům</option>
+                                <option value="byt-osobni-vlastnictvi">Byt v osobním vlastnictví</option>
+                                <option value="byt-druzstevni">Družstevní byt</option>
+                                <option value="chata">Chata</option>
+                                <option value="chalupa">Chalupa</option>
+                                <option value="garaz-samostatna">Garáž samostatná</option>
+                                <option value="garaz-radova">Garáž řadová</option>
+                                <option value="pozemek-stavebni">Stavební pozemek</option>
+                                <option value="pozemek-zemedelsky">Zemědělský pozemek</option>
+                                <option value="podil-nemovitosti">Podíl na nemovitosti</option>
+                                <option value="komerci-objekt">Komerční objekt</option>
+                                <option value="jine">Jiný typ nemovitosti</option>
+                            </select>
+                            <textarea name="message" rows="4" class="form-input w-full" placeholder="Popište stručně vaši nemovitost, její stav, lokalitu a důvod prodeje. Čím více informací nám poskytnete, tím rychleji a přesněji vám můžeme připravit cenovou nabídku." required></textarea>
+                            
+                            <div class="flex items-start gap-3">
+                                <input type="checkbox" id="gdprPopup" name="gdpr" class="mt-1 rounded border-gray-300 text-blue-600" required>
+                                <label for="gdprPopup" class="text-sm text-slate-600">
+                                    Souhlasím se zpracováním osobních údajů za účelem zpracování poptávky podle GDPR *
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="cta-button w-full">
+                                Odeslat nezávaznou poptávku
+                            </button>
+                            
+                            <p class="text-xs text-slate-500 text-center">
+                                * Povinné pole. Odpovíme vám do 24 hodin s nezávaznou cenovou nabídkou.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
